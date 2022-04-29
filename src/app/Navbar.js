@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link, useHistory} from 'react-router-dom'
-import Button from "@mui/material/Button";
 
 export const Navbar = () => {
     const history = useHistory();
@@ -12,10 +11,12 @@ export const Navbar = () => {
                 <div className="navContent">
                     <div className="navLinks">
                         <Link to="/main">Posts</Link>
-                        <Button onClick={() => {
+                        <Link to="/productsPage">Products</Link>
+                        <Link to="/login" onClick={() => {
                             history.push('/login');
                             localStorage.clear();
-                        }}>Logout</Button>
+                        }}> Logout
+                        </Link>
                     </div>
                 </div>
             </section>

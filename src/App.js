@@ -12,6 +12,7 @@ import {SinglePostPage} from './features/posts/SinglePostPage'
 import {EditPostForm} from './features/posts/EditPostForm'
 import SignInSide from './features/login/LoginForm'
 import {MainPage} from "./features/posts/MainPage";
+import {ProductsPage} from "./features/products/ProductsPage";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                         path="/main" component={MainPage}
                     />
                     <Route exact path="/posts/:postId" component={SinglePostPage}/>
+                    <Route exact path="/productsPage" component={ProductsPage}/>
                     <Route exact path="/editPost/:postId" component={EditPostForm}/>
                     <Route exact path="/login" component={SignInSide}/>
                     <Redirect to="/login"/>
